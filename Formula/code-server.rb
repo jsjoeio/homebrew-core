@@ -26,7 +26,7 @@ class CodeServer < Formula
   def install
     system "yarn", "--production", "--frozen-lockfile"
     libexec.install Dir["*"]
-    env = { PATH: "#{HOMEBREW_PREFIX}/opt/node/bin:$PATH" }
+    env = { PATH: "#{HOMEBREW_PREFIX}/opt/node@14/bin:$PATH" }
     (bin/"code-server").write_env_script "#{libexec}/out/node/entry.js", env
   end
 
