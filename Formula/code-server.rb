@@ -14,7 +14,7 @@ class CodeServer < Formula
 
   depends_on "python@3.9" => :build
   depends_on "yarn" => :build
-  depends_on "node"
+  depends_on "node@12"
 
   on_linux do
     depends_on "pkg-config" => :build
