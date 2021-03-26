@@ -69,6 +69,6 @@ class CodeServer < Formula
     # See https://github.com/cdr/code-server/blob/main/ci/build/test-standalone-release.sh
     system bin/"code-server", "--extensions-dir=.", "--install-extension", "wesbos.theme-cobalt2"
     assert_match "wesbos.theme-cobalt2",
-      shell_output("#{bin/"code-server"} --extensions-dir=. --list-extensions")
+      shell_output("#{bin}/code-server --extensions-dir=. --list-extensions")
   end
 end
