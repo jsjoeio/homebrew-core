@@ -16,7 +16,7 @@ class CodeServer < Formula
   depends_on "bash" => :build
   depends_on "python@3.10" => :build
   depends_on "yarn" => :build
-  depends_on "node@14"
+  depends_on "node@16"
 
   on_linux do
     depends_on "pkg-config" => :build
@@ -26,7 +26,7 @@ class CodeServer < Formula
   end
 
   def install
-    node = Formula["node@14"]
+    node = Formula["node@16"]
     system "yarn", "--production", "--frozen-lockfile"
     # @parcel/watcher bundles all binaries for other platforms & architectures
     # This deletes the non-matching architecture otherwise brew audit will complain.
